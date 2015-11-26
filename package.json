@@ -1,0 +1,22 @@
+{
+  "name": "ng-kyoto3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc-w": "tsc -w -t es5 -m commonjs --experimentalDecorators --emitDecoratorMetadata --moduleResolution node ./index.ts",
+    "watchify": "watchify ./index.js -o ./bundle.js -v",
+    "start": "http-server -p 8000 & npm run tsc-w & npm run watchify",
+    "stop": "killall  -- node http-server -p 8000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.46"
+  },
+  "devDependencies": {
+    "browserify": "^12.0.1",
+    "typescript": "^1.6.2"
+  }
+}
